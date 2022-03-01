@@ -1,14 +1,18 @@
 <template>
-  <div id="counter">
-    {{ message }}
-  </div>
+  <div>{{ count }}</div>
+  <button @click="increment">Up vote</button>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      message: "Hello World"
+      count: 4
+    }
+  },
+  methods: {
+    increment() {
+      this.count++
     }
   }
 }
