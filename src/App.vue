@@ -1,6 +1,6 @@
 <template>
   <div id="counter">
-    counter: {{ counter }}
+    {{ message }}
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 export default {
   data() {
     return {
-      counter: 0
+      message: "Hello World"
     }
   }
 }
