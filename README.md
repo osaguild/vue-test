@@ -26,3 +26,7 @@ practice for vue.js
    - `npm run build`
  - Compiles and hot-reloads for development
    - `npm run serve`
+
+## branches
+ - develop
+   - base for practice
