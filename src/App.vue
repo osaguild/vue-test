@@ -1,15 +1,14 @@
 <template>
-  <div id="counter">
-    {{ message }}
-  </div>
+  <TodoItem msg="todo message"/>
 </template>
 
 <script>
+import TodoItem from './components/TodoItem.vue'
+
 export default {
-  data() {
-    return {
-      message: "Hello World"
-    }
+  name: 'App',
+  components: {
+    TodoItem
   }
 }
 </script>
