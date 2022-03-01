@@ -1,9 +1,10 @@
 <template>
-  <div>{{ msg }}</div>
+  <li>{{ todo.text }}</li>
 </template>
 
 <script>
 export default {
-  name: "TodoItem"
+  name: "TodoItem",
+  props: ['todo']
 }
 </script>
