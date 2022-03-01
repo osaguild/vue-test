@@ -1,6 +1,6 @@
 <template>
-  <div id="counter">
-    {{ message }}
+  <div>
+    Counter {{ counter }}
   </div>
 </template>
 
@@ -8,8 +8,13 @@
 export default {
   data() {
     return {
-      message: "Hello World"
+      counter: 0
     }
+  },
+  mounted() {
+    setInterval(()=>{
+      this.counter++
+    },1000)
   }
 }
 </script>
