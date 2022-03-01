@@ -1,7 +1,7 @@
 # vue-test
 practice for vue.js
 
-## Environment setup
+## set up
  - Guide
    - `https://v3.ja.vuejs.org/guide/introduction.html`
  - IDE (visual studio code)
@@ -19,25 +19,10 @@ practice for vue.js
  - vue.js cli
    - `npm install -g @vue/cli`
    
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## develop
+ - Lints and fixes files
+   - `npm run lint`
+ - Compiles and minifies for production
+   - `npm run build`
+ - Compiles and hot-reloads for development
+   - `npm run serve`
