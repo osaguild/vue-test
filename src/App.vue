@@ -1,6 +1,7 @@
 <template>
-  <div id="counter">
-    {{ message }}
+  <div>
+    <p>{{ message }}</p>
+    <input v-model="message" />
   </div>
 </template>
 
