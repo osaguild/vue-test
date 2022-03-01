@@ -1,6 +1,10 @@
 <template>
-  <div id="counter">
-    {{ message }}
+  <div>
+    <ol>
+      <li v-for="(todo, index) in todos" :key="index">
+        {{ todo.text }}
+      </li>
+    </ol>
   </div>
 </template>
 
@@ -8,7 +12,11 @@
 export default {
   data() {
     return {
-      message: "Hello World"
+      todos: [
+        { text: 'learn javascript' },
+        { text: 'learn vue' },
+        { text: 'build something awesome' }
+      ]
     }
   }
 }
