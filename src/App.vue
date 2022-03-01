@@ -1,6 +1,6 @@
 <template>
-  <div id="counter">
-    {{ message }}
+  <div>
+    <span v-if="seen">Now you see me</span>
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 export default {
   data() {
     return {
-      message: "Hello World"
+      seen: true
     }
   }
 }
