@@ -1,19 +1,20 @@
 <template>
-  <div>{{ count }}</div>
-  <button @click="increment">Up vote</button>
+  <button @click="click">{{ count }}</button>
 </template>
 
 <script>
+import _ from 'lodash'
+
 export default {
   data() {
     return {
-      count: 4
+      count: 1
     }
   },
   methods: {
-    increment() {
+    click: _.debounce (function() {
       this.count++
-    }
+    }, 2000)
   }
 }
 </script>
