@@ -1,9 +1,9 @@
 <template>
-  <button @click="click">{{ count }}</button>
+  <save-button></save-button>
 </template>
 
 <script>
-import _ from 'lodash'
+import SaveButton from './SaveButton.vue'
 
 export default {
   data() {
@@ -11,10 +11,8 @@ export default {
       count: 1
     }
   },
-  methods: {
-    click: _.debounce (function() {
-      this.count++
-    }, 2000)
+  components: {
+    SaveButton
   }
 }
 </script>
