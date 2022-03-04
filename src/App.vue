@@ -1,14 +1,18 @@
 <template>
-  <div id="counter">
-    {{ message }}
-  </div>
+  <div class="static" :class="{ active: isActive, 'text-danger': hasError }"></div>
+  <div :class="classObject"></div>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      message: "Hello World"
+      isActive: true,
+      hasError: true,
+      classObject: {
+        active: true,
+        'text-danger': true
+      }
     }
   }
 }
