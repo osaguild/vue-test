@@ -1,13 +1,9 @@
 <template>
   <div>
-    <p>has published books</p>
-    <div>{{ publishedBooksMessageCompute }}</div>
-    <div>{{ publishedBooksMessageMethod() }}</div>
-  </div>
-  <div>
-    <p>now date</p>
-    <div>{{ dateNowCompute }}</div>
-    <div>{{ dateNowMethod() }}</div>
+    <div>set full name:{{ this.fullName = 'first last' }}</div>
+    <div>get first name: {{ firstName }}</div>
+    <div>get last name: {{ lastName }}</div>
+    <div>get full name: {{ fullName }}</div>
   </div>
 </template>
 
@@ -15,30 +11,20 @@
 export default {
   data() {
     return {
-      author: {
-        name: "John Doe",
-        books: [
-          'Vue 2 - Advanced Guide',
-          'Vue 3 - Basic Guide',
-          'Vue 4 - The Mystery'
-        ]
-      }
+      firstName: '',
+      lastName: ''
     }
   },
   computed: {
-    publishedBooksMessageCompute() {
-      return this.author.books.length > 0 ? 'Yes' : 'No'
-    },
-    dateNowCompute() {
-      return Date.now()
-    }
-  },
-  methods: {
-    publishedBooksMessageMethod() {
-      return this.author.books.length > 0 ? 'Yes' : 'No'
-    },
-    dateNowMethod() {
-      return Date.now()
+    fullName: {
+      get() {
+        return this.firstName + ' ' + this.lastName
+      },
+      set(newValue) {
+        const names = newValue.split(' ')
+        this.firstName = names[0]
+        this.lastName = names[names.length - 1]
+      }
     }
   }
 }
