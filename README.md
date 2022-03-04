@@ -1,3 +1,3 @@
 # develop memo
- - install lodash
-   - `npm i --save lodash`
+ - install axios
+   - `npm install --save axios vue-axios`
