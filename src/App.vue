@@ -1,5 +1,4 @@
 <template>
-  <div class="static" :class="{ active: isActive, 'text-danger': hasError }"></div>
   <div :class="classObject"></div>
 </template>
 
@@ -8,10 +7,14 @@ export default {
   data() {
     return {
       isActive: true,
-      hasError: true,
-      classObject: {
-        active: true,
-        'text-danger': true
+      error: null
+    }
+  },
+  computed: {
+    classObject() {
+      return {
+        active: this.isActive && !this.error,
+        'text-danger': this.error && this.error.type === 'fatal'
       }
     }
   }
