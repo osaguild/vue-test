@@ -1,20 +1,14 @@
 <template>
-  <custom-input :model-value="searchText" @update:model-value="searchText = $event"></custom-input>
-    {{searchText}}
+  <alert-box>something bud happened</alert-box>
 </template>
 
 <script>
-import CustomInput from './components/CustomInput.vue'
+import AlertBox from './components/AlertBox.vue'
 
 export default {
   name: 'App',
-  data() {
-    return {
-      searchText: ''
-    }
-  },
   components: {
-    CustomInput
+    AlertBox
   }
 }
 </script>
