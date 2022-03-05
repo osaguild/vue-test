@@ -1,25 +1,26 @@
 <template>
-  <ol>
-    <todo-item v-for="item in groceryList" :todo="item" :key="item.id"></todo-item>
-  </ol>
+  <div :style="{fontSize: postFontSize + 'em'}">
+    <blog-post v-for="(post,index) in posts" :key="index" :title="post.title" @enlarge-text="postFontSize += $event"></blog-post>
+  </div>
 </template>
 
 <script>
-import TodoItem from './components/TodoItem.vue'
+import BlogPost from './components/BlogPost.vue'
 
 export default {
   name: 'App',
   data() {
     return {
-      groceryList: [
-        { id: 0, text: 'Vegetables' },
-        { id: 1, text: 'Cheese' },
-        { id: 2, text: 'Whatever else humans are supposed to eat' }
-      ]
+      posts: [
+        { title: 'Vegetables' },
+        { title: 'Cheese' },
+        { title: 'Whatever else humans are supposed to eat' }
+      ],
+      postFontSize: 1
     }
   },
   components: {
-    TodoItem
+    BlogPost
   }
 }
 </script>
