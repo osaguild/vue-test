@@ -1,26 +1,20 @@
 <template>
-  <div :style="{fontSize: postFontSize + 'em'}">
-    <blog-post v-for="(post,index) in posts" :key="index" :title="post.title" @enlarge-text="postFontSize += $event"></blog-post>
-  </div>
+  <custom-input :model-value="searchText" @update:model-value="searchText = $event"></custom-input>
+    {{searchText}}
 </template>
 
 <script>
-import BlogPost from './components/BlogPost.vue'
+import CustomInput from './components/CustomInput.vue'
 
 export default {
   name: 'App',
   data() {
     return {
-      posts: [
-        { title: 'Vegetables' },
-        { title: 'Cheese' },
-        { title: 'Whatever else humans are supposed to eat' }
-      ],
-      postFontSize: 1
+      searchText: ''
     }
   },
   components: {
-    BlogPost
+    CustomInput
   }
 }
 </script>
