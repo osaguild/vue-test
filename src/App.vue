@@ -1,10 +1,6 @@
 <template>
-  <user-name v-model:first-Name="firstName" v-model:last-Name="lastName"></user-name>
+  <user-name v-model:first-name="firstName" v-model:last-name="lastName"></user-name>
   <span>{{firstName}}.{{lastName}}</span>
-  <!--
-  <my-component v-model:title="bookTitle"></my-component>
-  {{ bookTitle }}
-  -->
 </template>
 
 <script>
@@ -22,19 +18,4 @@ export default {
     UserName
   }
 }
-/*
-import MyComponent from './components/MyComponent.vue'
-
-export default {
-  name: 'App',
-  data() {
-    return {
-      bookTitle: 'aaa'
-    }
-  },
-  components: {
-    MyComponent
-  }
-}
- */
 </script>
