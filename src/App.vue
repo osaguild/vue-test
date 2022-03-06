@@ -1,20 +1,21 @@
 <template>
-  <my-component v-model:title="bookTitle"></my-component>
-  {{ bookTitle }}
+  <user-name v-model:first-Name="firstName" v-model:last-Name="lastName"></user-name>
+  <span>{{firstName}}.{{lastName}}</span>
 </template>
 
 <script>
-import MyComponent from './components/MyComponent.vue'
+import UserName from './components/UserName.vue'
 
 export default {
   name: 'App',
   data() {
     return {
-      bookTitle: 'aaa'
+      firstName: '',
+      lastName: ''
     }
   },
   components: {
-    MyComponent
+    UserName
   }
 }
 </script>
