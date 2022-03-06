@@ -6,10 +6,7 @@
 <script>
 export default {
   name: "UserName",
-  props: {
-    firstName: String,
-    lastName: String
-  },
+  props: ['firstName','lastName'],
   emits: ['update:firstName','update:lastName']
 }
 </script>

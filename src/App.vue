@@ -10,8 +10,8 @@ export default {
   name: 'App',
   data() {
     return {
-      firstName: '',
-      lastName: ''
+      firstName: 'aaa',
+      lastName: 'bbb'
     }
   },
   components: {
