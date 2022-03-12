@@ -1,14 +1,16 @@
 <template>
   <div id="counter">
-    {{ message }}
+    {{ users[0].id }}, {{ users[0].name }}
+    {{ users[1].id }}, {{ users[1].name }}
   </div>
 </template>
 
 <script>
+import Users from "./data/users"
 export default {
   data() {
     return {
-      message: "Hello World"
+      users: Users
     }
   }
 }
